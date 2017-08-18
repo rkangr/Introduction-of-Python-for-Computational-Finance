@@ -1,5 +1,6 @@
 title            : Introduction of Python for Computational Finance
-description      : This is an automatically generated demo course which will help you on your way to create an awesome DataCamp course.
-university       : DataCamp
+description      : The aim is to learn to use Python for computational tasks.
+university       : University of Tartu
 difficulty_level : 2
-time_needed      : 1 hour
+time_needed      : 8 hours
+programming_language: python
