@@ -82,13 +82,7 @@ x=sp.arange(1,5)
 *** =sct
 ```{python}
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
-
-test_function("sp.arange", args = "start",
-              not_called_msg = "You didn't call `arange()`!",
-              incorrect_msg = "You didn't call `str(object = ...)` with the correct argument, `object`.")
-
-
-test_error()
+Ex().check_object('x').has_equal_value()
 
 success_msg("Good work!")
 ```
