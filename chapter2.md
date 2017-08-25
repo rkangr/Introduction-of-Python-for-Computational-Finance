@@ -57,8 +57,7 @@ success_msg("Correct solution!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:c61ffc66e6
-## Basin operators
-Arithmetic operators
+## Arithmetic operators
 
 In Computational Finance course our programs have to perform many mathematical computations, so we have to know how to do that in Python. Fortunately most common operations work as expected in Python 3.x
 
@@ -67,11 +66,17 @@ Operator |	Name	| Example |	Result
 `+` |	Addition |	`x+y`	|Sum of `x` and `y`
 `-`	| Subtraction |	`x-y`	| Difference of `x` and 
 `*` |	Multiplication | `x*y`	Product of `x` and `y`.
-/	| Division	| x/y |	Quotient of x and y. 7/2 gives 3.5 
-%  |	Modulus	| x%y |	Remainder of x divided by y. 17%5 gives 2
-** |	Exponent |	x**y |	x to the power y ($x^y$). 2**3 gives 8
-//	| Floor Division |	x//y |	gives largest integer that is not larger than x/y. 
+`/`	| Division	| `x/y` |	 `x` divided by `y`. 7/2 gives 3.5 
+`%`  |	Modulus	| `x%y` |	Remainder of `x` divided by `y`. 17%5 gives 2
+`**` |	Exponent |	`x**y` |	`x` to the power `y` ($x^y$). 2**3 gives 8
+`//`	| Floor Division |	`x//y` |	largest integer that is not larger than x/y. 
 
+It is important to remember that usual rules of arithmetic hold (exponents are computed first, multiplication and division are done before additions and subtraction, same level operations are performed from left to right) and that often it is good idea to use parentheses to guarantee that operations are done in the order we want. 
+
+Example: suppose we want to compute $\frac{x}{2y}$ in Python, where $x$ and $y$ are some variables. A common mistake is to write 
+`x/2*y`. 
+Since division and multiplication have equal precedence, the result is computed from left to right: $x$ is divided by 2 and the result is multiplied by $y$, which is not what we want (if $x=10$ and $y=5$, the final result is 25, but should be 1). A better way is to use parentheses as follows: 
+`x/(2*y)`
 
 *** =instructions
 
