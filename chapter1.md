@@ -58,7 +58,7 @@ A dataset with a selection of movies, `movie_selection`, is available in the wor
 
 *** =pre_exercise_code
 ```{python}
-import scipy as sp
+import numpy as np
 ```
 
 *** =sample_code
@@ -76,7 +76,7 @@ import scipy as sp
 # write your code here
 # scipy package commands are available in the form sp.command
 # define an array x with elements 1,2,3,4
-x=sp.arange(1,5)
+x=np.arange(1,5)
 ```
 
 *** =sct
