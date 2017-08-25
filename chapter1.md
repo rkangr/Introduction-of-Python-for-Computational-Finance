@@ -1,8 +1,6 @@
 ---
 title       : Introduction
-description : Insert the chapter description here
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
+description : Introduction
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:14e58130b3
 ## A really bad movie
