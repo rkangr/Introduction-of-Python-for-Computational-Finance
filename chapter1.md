@@ -62,7 +62,7 @@ success_msg("Correct solution!")
 Computational programs have to perform many mathematical computations, so we have to know how to do that in Python. Fortunately most common operations work as expected in Python 3.x
 
 Operator |	Name	| Example |	Result
---- | --- | --- | ---
+ --- | --- | --- | ---
 `+` |	Addition |	`x+y`	|Sum of `x` and `y`
 `-`	| Subtraction |	`x-y`	| Difference of `x` and 
 `*` |	Multiplication | `x*y`	Product of `x` and `y`.
@@ -139,5 +139,58 @@ Ex().check_object('c').has_equal_value()
 Ex().check_object('x1').has_equal_value()
 Ex().check_object('x2').has_equal_value()
 success_msg("Correct solution!")
+
+```
+
+--- type:NormalExercise lang:python xp:100 skills:2 key:9982b9aa0a
+## Comparison operators
+It is often necessary to compare two numbers (like estimated error and desired accuracy) in order to decide what our program should do next. The comparison operators are as follows:
+
+Operator |	Description
+ --- | ---
+ `==` |	is equal
+`!=` | not equal
+`>` | greater than
+`<` |	less than
+`>=` | greater than or equal to
+`<=` |	less than or equal to
+
+For two numbers the result of comparison is `True` or `False`. For example, if we define `x=2`, then the value of the expression `x>=0.5` is `True` and the value of `x<1.5` is `False`
+
+*** =instructions
+Assume that variables `a` and `b` are defined. Use the `print` command to print out the results of the required comparisons
+
+*** =hint
+- Make sure that you use two equal signs for testing the equality!
+
+*** =pre_exercise_code
+```{python}
+a=7
+b=5
+```
+
+*** =sample_code
+```{python}
+# print out the result of testing the equality of a and b
+
+# print out the result of testing if a is less than 7*b-30
+
+```
+
+*** =solution
+```{python}
+# print out the result of testing the equality of a and b
+print(a==b)
+
+# print out the result of testing if a is less than 7*b-20
+print(a<7*b-20)
+
+```
+
+*** =sct
+```{python}
+test_output_contains("False.*\n.*True",
+                     pattern=True,
+                     no_output_msg=None)
 
 ```
