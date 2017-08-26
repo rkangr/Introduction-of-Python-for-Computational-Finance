@@ -79,7 +79,16 @@ Since division and multiplication have equal precedence, the result is computed 
 `x/(2*y)`
 
 *** =instructions
-We know that the solutions to the quadratic equation $ax^2+bx+c=0$ are given by $x_1=\frac{−b+\sqrt{b^2−4ac}}{2a}$ and $x_2=\frac{−b-\sqrt{b^2−4ac}}{2a}$. Define the variables `a=6,b=-1,c=-1` and `x1,x2` according to the formulas for $x_1$ and $x_2$. Use the knowledge that $\sqrt{x}=x^{0.5}$ so that the answer is computed by using only arithmetic operators.
+We know that the solutions to the quadratic equation $ax^2+bx+c=0$ are given by 
+
+$$ x_1=\frac{−b+\sqrt{b^2−4ac}}{2a} $$
+
+and 
+
+$$x_2=\frac{−b-\sqrt{b^2−4ac}}{2a}.$$
+
+Define the variables `a=6,b=-1,c=-1` and `x1,x2` according to the formulas for
+ $x_i,\ i=1,2$. Use the knowledge that $\sqrt{x}=x^{0.5}$ so that the answer is computed by using only arithmetic operators.
 
 *** =hint
 - Both numerator and the denominator have to be grouped by parantheses
@@ -99,7 +108,10 @@ We know that the solutions to the quadratic equation $ax^2+bx+c=0$ are given by 
 
 #define x1
 
-#define x2
+#define 
+
+#an example of nicely formatted output
+print("the solutions of the equation are x1={} and x2={}".format(x1,x2))
 
 ```
 
@@ -115,6 +127,8 @@ c = -1
 x1 = (-b+(b**2-4*a*c)**(0.5))/(2*a)
 #define x2
 x2 = (-b-(b**2-4*a*c)**(0.5))/(2*a)
+#an example of nicely formatted output
+print("The solutions of the equation are x1={} and x2={}.".format(x1,x2))
 ```
 
 *** =sct
