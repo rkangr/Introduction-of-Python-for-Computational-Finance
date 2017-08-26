@@ -59,7 +59,7 @@ success_msg("Correct solution!")
 --- type:NormalExercise lang:python xp:100 skills:2 key:c61ffc66e6
 ## Arithmetic operators
 
-In Computational Finance course our programs have to perform many mathematical computations, so we have to know how to do that in Python. Fortunately most common operations work as expected in Python 3.x
+Computational programs have to perform many mathematical computations, so we have to know how to do that in Python. Fortunately most common operations work as expected in Python 3.x
 
 Operator |	Name	| Example |	Result
 --- | --- | --- | ---
@@ -73,14 +73,16 @@ Operator |	Name	| Example |	Result
 
 It is important to remember that usual rules of arithmetic hold (exponents are computed first, multiplication and division are done before additions and subtraction, same level operations are performed from left to right) and that often it is good idea to use parentheses to guarantee that operations are done in the order we want. 
 
-Example: suppose we want to compute $\frac{x}{2y}$ in Python, where $x$ and $y$ are some variables. A common mistake is to write 
+**Example**: suppose we want to compute $\frac{x}{2y}$ in Python, where $x$ and $y$ are some variables. A common mistake is to write 
 `x/2*y`. 
 Since division and multiplication have equal precedence, the result is computed from left to right: $x$ is divided by 2 and the result is multiplied by $y$, which is not what we want (if $x=10$ and $y=5$, the final result is 25, but should be 1). A better way is to use parentheses as follows: 
 `x/(2*y)`
 
 *** =instructions
+We know that the solutions to the quadratic equation $ax^2+bx+c=0$ are given by $x_1=\frac{−b+\sqrt{b^2−4ac}}{2a}$ and $x_2=\frac{−b-\sqrt{b^2−4ac}}{2a}$. Define the variables `a=6,b=-1,c=-1` and `x1,x2` according to the formulas for $x_1$ and $x_2$. Use the knowledge that $\sqrt{x}=x^{0.5}$ so that the answer is computed by using only arithmetic operators.
 
 *** =hint
+- Both numerator and the denominator have to be grouped by parantheses
 
 *** =pre_exercise_code
 ```{python}
@@ -89,15 +91,39 @@ Since division and multiplication have equal precedence, the result is computed 
 
 *** =sample_code
 ```{python}
+#define a
+
+#define b
+
+#define c
+
+#define x1
+
+#define x2
 
 ```
 
 *** =solution
 ```{python}
-
+#define a
+a = 6
+#define b
+b = -1
+#define c
+c = -1
+#define x1
+x1 = (-b+(b**2-4*a*c)**(0.5))/(2*a)
+#define x2
+x2 = (-b-(b**2-4*a*c)**(0.5))/(2*a)
 ```
 
 *** =sct
 ```{python}
+Ex().check_object('a').has_equal_value()
+Ex().check_object('b').has_equal_value()
+Ex().check_object('c').has_equal_value()
+Ex().check_object('x1').has_equal_value()
+Ex().check_object('x2').has_equal_value()
+success_msg("Correct solution!")
 
 ```
