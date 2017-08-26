@@ -173,7 +173,7 @@ b=5
 ```{python}
 # print out the result of testing the equality of a and b
 
-# print out the result of testing if a is less than 7*b-30
+# print out the result of testing if a is less than 7*b-20
 
 ```
 
