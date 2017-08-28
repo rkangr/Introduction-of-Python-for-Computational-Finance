@@ -207,7 +207,7 @@ This idea can be used to define piecewise continuous functions so that they also
 
 *** =instructions
 
-Assume that `x` and `y` are variables that contain real numbers. Define variable z by a formula that evaluates to $x+y$ if $x\leq y$; to 0, if $y<x\leq y+1$ and to $x-y$, if $x>y+1$ by using a single expression without using `if` command. 
+Assume that `x` and `y` are variables that contain real numbers. Define variable `z` according to the formula that evaluates to $x+y$ if $x\leq y$; to 0, if $y<x\leq y+1$ and to $x-y$, if $x>y+1$ by using a single expression without using `if` command. 
 
 *** =hint
 
