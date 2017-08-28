@@ -194,3 +194,35 @@ test_output_contains("False.*\n.*True",
                      no_output_msg=None)
 
 ```
+
+--- type:NormalExercise lang:python xp:100 skills:2 key:4a523ea7e6
+## True/False values in arithmetic operations
+A useful property of Python (and many other languages) is that boolean values True and False are converted to 1 and 0 in arithmetical expressions. This makes it easy to write expressions that compute different values depending on some conditions without using . Example: the expression
+
+x**3*(x<=0)+x**2*(x>0)
+
+computes $$x^3$$ if  $$x\leq 0$$ and $$x^2$$ if $$x>0$$:
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+
+```
+
+*** =solution
+```{python}
+
+```
+
+*** =sct
+```{python}
+
+```
