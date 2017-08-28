@@ -199,30 +199,41 @@ test_output_contains("False.*\n.*True",
 ## True/False values in arithmetic operations
 A useful property of Python (and many other languages) is that boolean values True and False are converted to 1 and 0 in arithmetical expressions. This makes it easy to write expressions that compute different values depending on some conditions without using . Example: the expression
 
-x**3*(x<=0)+x**2*(x>0)
+`x**3*(x<=0)+x**2*(x>0)`
 
-computes $$x^3$$ if  $$x\leq 0$$ and $$x^2$$ if $$x>0$$:
+computes $x^3$ if  $x\leq 0$ and $x^2$ if $x>0$. 
+
+This idea can be used to define piecewise continuous functions so that they also work with arrays.
 
 *** =instructions
+
+Assume that `x` and `y` are variables that contain real numbers. Define variable z by a formula that evaluates to $x+y$ if $x\leq y$; to 0, if $y<x\leq y+1$ and to $x-y$, if $x>y+1$ by using a single expression without using `if` command. 
 
 *** =hint
 
 *** =pre_exercise_code
 ```{python}
+x=27
+y=-371
 
 ```
 
 *** =sample_code
 ```{python}
+#define the variable z in terms of x and y
 
 ```
 
 *** =solution
 ```{python}
-
+#define the variable z in terms of x and y
+z=(x+y)*(x<=y)+(x-y)*(x>y+1)
 ```
 
 *** =sct
 ```{python}
+test_student_typed("#define the variable z in terms of x and y[&xyz<>\(\)\s\*\+=01-]*$",not_typed_msg="The expression you used contains wrong symbol")
+Ex().check_object('z').has_equal_value()
+success_msg("Correct solution!")
 
 ```
