@@ -1,0 +1,83 @@
+---
+title       : Manipulating vectors
+description : Some basic operations with NumPy vectors
+
+--- type:NormalExercise lang:python xp:100 skills:2 key:37e0df6c79
+## Using vectors
+
+When we have created vectors our aim is typically to make use of them. Many functions can be used.
+
+1) + - * / **   % are examples of binary operators (performing addition, subtraction, multiplication, division, raising to a power, division, integer division remainder, respectively). They all operate elementwise as do most of the functions in the NumPy and SciPy packages of Python.  
+For example after creating 
+
+```python
+x=np.array([3.4,7]) 
+y=np.array([1,5])
+```
+we can write
+`x+y`
+to get a vector with elements 4.4,12 as a result and `x/y` to get a vector with elements 3.4,1.4. The vectors that we are going to use should have the same length (or at least one of them should be an single number). 
+
+2)Examples of (element-wise) operators producing logical vectors are `==` `>=` `>` `<` `<=` `!=` (respectively equal to, greater than or equal to, greater than, less than, less than or equal to and not equal to.  For example
+x>y 
+returns True,True as both elements of x are greater than the respective elements of y. 
+It is also interesting that logical vectors can be used in arithmetic operations like 5+3*(x>4). Python simply translates True to 1 and False to 0.
+
+3) Some functions use all the elements in the input vector to produce a single number as a result. For example
+`np.mean(x)`
+produces 4.2, `np.any(x>4)` returns True (since at least one of the values of the logical vector `x>4` is True) and `np.all(x>4)` returns False (since at least one of the values of `x>4` is False)
+
+4)We might need just some elements of a vector. This is accomplished with square brackets. Let us define
+`x=np.arange(2,11)`
+`y=np.arange(9,0,-1)`
+It is imprtant to remember that in Python the elements of a vector are numbered starting from 0. Thus we can
+
+- ask for the third element in vector y with `y[2]`
+- ask for the third, fourth and fifth element of y by `y[2:5]` (note that the first number is the index of the first element we want and the second number is the index of the first element we don't want, ie the element with index 5 is not included)
+- ask for the first three elements in y with `y[:3]` (missing starting index is taken to be 0)
+- ask for the last four elements in y with `y[-4:]` (negative number denotes counting from the end)
+- ask for the second, fourth and sixth element from `x` with
+`x[np.array([1,3,5])]`
+- ask for specific elements from `x` by specifying the required elements by a logical vector which is created using a condition like  `x[y>4]` or `x[(x>3)&(x<5)]`
+- write an index after any expression that produces a vector, for example (x-y)[2] and np.sqrt(x)[3] are valid usages of indexes.
+
+5) Replacing elements in a vector is possible by first selecting the elements that need replacing (as shown previously) and then writing the replacements on the other side of the equality sign. For example
+`y[1:6]=np.array([1,3,11,2,9])`
+replaces the five elements starting from the second one in the vector y by 1,3,11,2,9 respectively.
+
+6) Sometimes we need to save the current values of a vector for later use before modifying them. The correct way is to use a command of the form
+`y=x.copy()`
+If one uses `y=x`, then `y` and `x` are just two different names for the same memory location (`y` is an alias or nickname of `x`) and if you modify the value of one, the value of the other one also changes. Execute the commands 
+
+```python
+import numpy as np
+x=np.arange(5)
+y=x.copy()
+z=x
+x[2]=10
+z[-1]=0
+```
+in the Ipython shell and check what happened to the values of `x`, `y` and `z`. Do you see the difference?
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+
+```
+
+*** =solution
+```{python}
+
+```
+
+*** =sct
+```{python}
+
+```
