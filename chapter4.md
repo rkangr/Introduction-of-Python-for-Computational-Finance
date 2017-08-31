@@ -144,10 +144,10 @@ It is important to understand that after an argument with a default value there 
 *** =solution
 ```{python}
 #imort the NumPy package with the name np
-
+import numpy as np
 #define the function Bounds
 def Bounds(x):
-    return(np.array([np.amax(x),np.amin(x)]))
+    return(np.array([np.amin(x),np.amax(x)]))
     
 #define the function average_f
 def average_f(f,n):
