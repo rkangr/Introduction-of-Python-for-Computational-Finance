@@ -120,6 +120,8 @@ print(maxval(g,0,6,1001))
 It is important to understand that after an argument with a default value there should be no other arguments without default values. So if we want to give a default value for the argument start, we should also give default values for the arguments end and n.
 
 *** =instructions
+- Write a function Bounds that gets a vector of numbers as an input and returns the two dimensional vector containing the minimal and the maximal values of the given vector as the output.
+- Write a function average_f, that takes as arguments the name of a function of one variable and an integer n and returns the arithmetic average of the values of the function at argument values 1,2,...,n. Test your function with the sine and cosine functions for n=1000.
 
 *** =hint
 
@@ -130,17 +132,35 @@ It is important to understand that after an argument with a default value there 
 
 *** =sample_code
 ```{python}
+#imort the NumPy package with the name np
+
+#define the function Bounds
+
+#define the function average_f
+
 
 ```
 
 *** =solution
 ```{python}
+#imort the NumPy package with the name np
+
+#define the function Bounds
+def Bounds(x):
+    return(np.array([np.amax(x),np.amin(x)]))
+    
+#define the function average_f
+def average_f(f,n):
+    x=np.arange(1,n+1)
+    return(np.mean(f(x)))
 
 ```
 
 *** =sct
 ```{python}
-
+Ex().has_equal_value(expr_code="Bounds(np.array([0,-1.1,3.14]))")
+Ex().has_equal_value(expr_code="average_f(np.sin,10)")
+success_msg("Good job!")
 ```
 ---
 title       : Functions
