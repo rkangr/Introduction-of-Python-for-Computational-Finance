@@ -1,3 +1,7 @@
+---
+title       : Functions
+description : Defining functions in Python
+
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:70413ba714
 ## Functions
