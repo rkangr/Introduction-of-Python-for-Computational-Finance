@@ -136,7 +136,7 @@ It is important to understand that after an argument with a default value there 
 
 *** =sample_code
 ```{python}
-#imort the NumPy package with the name np
+#import the NumPy package with the name np
 
 #define the function Bounds
 
