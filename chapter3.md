@@ -27,7 +27,7 @@ It is also interesting that logical vectors can be used in arithmetic operations
 `np.mean(x)`
 produces 4.2, `np.any(x>4)` returns True (since at least one of the values of the logical vector `x>4` is True) and `np.all(x>4)` returns False (since at least one of the values of `x>4` is False)
 
-4)We might need just some elements of a vector. This is accomplished with square brackets and using indexes, index arrays or slicing notatins. Slicing notations allows to specify in the square brackets the starting index, ending index (which is not included!) and an optional increment (the step between consecutive indexes used with default value of 1; can also be negative if we want to move in negative direction). So `x[start:end:step]` denotes elements of `x` with indexes `start`, `start+step`, `start + 2*step` and so on, wich are smaller than `end` (index `end` is not used!). Negative `start` or `end` specify distance from the end of the array. If `start` of `end` are not specified, they are taken so that maximal number of indexes is returned - if `step` is positive, then missing start means that elements with indexes starting from 0 are selected and in the case of missing end all possible indexes of the form `start+step` are used; in the case of negative `step`, missing `start` means that selected indexes start from the last element of the array and missing `end` means, that again all idexes of the form `start+step` are used.
+4)We might need just some elements of a vector. This is accomplished with square brackets and using indexes, index arrays or slicing notatins. Slicing notations allows to specify in the square brackets the starting index, ending index (which is not included!) and an optional increment (the step between consecutive indexes used with default value of 1; can also be negative if we want to move in negative direction). So `x[start:end:step]` denotes elements of `x` with indexes `start`, `start+step`, `start + 2*step` and so on, which are smaller than `end` (index `end` is not used!). Negative `start` or `end` specify distance from the end of the array. If `start` of `end` are not specified, they are taken so that maximal number of indexes is returned - if `step` is positive, then missing start means that elements with indexes starting from 0 are selected and in the case of missing end all possible indexes of the form `start+step` are used; in the case of negative `step`, missing `start` means that selected indexes start from the last element of the array and missing `end` means, that again all idexes of the form `start+step` are used.
 
 Let us define
 `x=np.arange(2,11)`
@@ -78,7 +78,7 @@ in the Ipython shell and check what happened to the values of `x`, `y` and `z`. 
 
 *** =sample_code
 ```{python}
-from numpy import np
+import numpy as np
 #define x1
 
 #define x2

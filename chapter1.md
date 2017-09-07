@@ -108,7 +108,7 @@ Define the variables `a=6,b=-1,c=-1` and `x1,x2` according to the formulas for
 
 #define x1
 
-#define 
+#define x2
 
 #an example of nicely formatted output
 print("the solutions of the equation are x1={} and x2={}".format(x1,x2))
