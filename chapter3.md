@@ -117,6 +117,8 @@ print(np.mean(z))
 
 *** =sct
 ```{python}
+import numpy as np
+set_converter(key = "numpy.ndarray", fundef = lambda x: np.round(x,10))
 Ex().check_object('x1').has_equal_value()
 Ex().check_object('x2').has_equal_value()
 Ex().check_object('y').has_equal_value()

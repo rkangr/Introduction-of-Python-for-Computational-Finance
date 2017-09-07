@@ -110,6 +110,8 @@ w=np.linspace(-1,1,101)
 
 *** =sct
 ```{python}
+import numpy as np
+set_converter(key = "numpy.ndarray", fundef = lambda x: np.round(x,10))
 Ex().check_object('x').has_equal_value()
 Ex().check_object('y').has_equal_value()
 Ex().check_object('z').has_equal_value()
