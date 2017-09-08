@@ -126,7 +126,7 @@ Ex().check_object('x2').has_equal_value()
 Ex().check_object('y').has_equal_value()
 Ex().check_object('z').has_equal_value()
 test_output_contains("1024.*512", no_output_msg="the first print command should produce array with values 1024,512")
-test_output_contains("307.2",pattern=False)
+test_output_contains("309.4",pattern=False)
 success_msg("Correct solution!")
 
 ```
