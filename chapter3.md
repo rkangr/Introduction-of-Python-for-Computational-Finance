@@ -61,10 +61,12 @@ x[2]=10
 z[-1]=0
 ```
 in the Ipython shell and check what happened to the values of `x`, `y` and `z`. Do you see the difference?
+
+The same applies also to slices of a vector: if we define a new vector from an existing one using the slice notation (like `w=x[1:4:2]`), then actually `w` is just another way to access values of `x[1]`and `x[3]`. If we later modify `w` by assigning new values to it's elements (like `w[0]=5`), then actually the value of the second element of `x` is changed. So if we use a slice notation do define new wectors and want to modify some values of the new vector without modifying the value of the original one, we have to use the form of assignement with `.copy()` like `w=x[1:4:2].copy()`
 *** =instructions
 
 - Write a command that creates a vector `x1` with elements 2,4,8,16,32,64,...,1024 without specifying explicitly the values
-- Write a command that creates a vector `x2` containing the values of `x1` in the reverse order
+- Write a command that creates a vector `x2` containing the values of `x1` in the reverse order so that changing the values of some elements of `x2` does not change the values of `x1`
 - Replace the third and seventh value of `x2` by 10.
 - Print out elements from `x2` that are greater than 150.
 - Define a vector `y` with the elements of the form 150, 162,174,...,258. Let `z` be the vector of elementwise maximum of `x1` and `y`. Print out the mean value of `z`.
@@ -101,7 +103,7 @@ import numpy as np
 #define x1
 x1=2**np.arange(1,11)
 #define x2
-x2=x1[::-1]
+x2=x1[::-1].copy()
 #modify x2
 x2[np.array([2,6])]=10
 #print elements from x2 that are greater than 150
