@@ -14,7 +14,7 @@ n=500
 TotalPrice=n*Price
 ```
 
- If on the right hand side of `=` is an expression involving some computations then first the result of the right hand side is computed and the final value is assigned to the variable
+ If on the right hand side of `=` is an expression involving some computations then first the result of the right hand side is computed and after that the final value is assigned to the variable
 
 
 *** =instructions
